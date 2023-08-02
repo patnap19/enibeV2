@@ -191,4 +191,38 @@ text-transform: uppercase;
 .offer {
     background-color: var(--color-second-red);
     color: white;
+    padding: 40px 0;
+}
+
+.main-offer-buttons__container{
+    margin-top: 100px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.main-offer-buttons__container button {
+    padding: 20px 40px;
+    font-size: 29px;
+    margin: 0 40px;
+    cursor: pointer;
+    background-color: transparent;
+    color: var(--color-white);
+    border: 1px solid var(--color-white);
+    transition: color .3s, background-color .4s;
+}
+
+.main-offer-buttons__container button.active{
+    background-color: var(--color-white);
+   color: var(--color-second-black);
+}
+
+.main-offer-buttons__container button:hover{
+   background-color: var(--color-white);
+   color: var(--color-second-black);
+}
+
+.main-offer-info__container{
+    width: 100%;
+    background-color: white;
+    min-height: 50vh;
 }
