@@ -114,12 +114,13 @@ text-transform: uppercase;
     left: 0;
     width: 100%;
     text-align: center;
-    font-size: 58px;
+    
     color: var(--color-white);
 }
 
 .site-title{
     font-weight: normal;
+    font-size: 58px;
 }
 
 /* ustawienia na przycisk do kontaktu */
