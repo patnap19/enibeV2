@@ -223,12 +223,12 @@ text-transform: uppercase;
 
 .main-offer-buttons__container button.active{
     background-color: var(--color-white);
-    color: var(--color-second-black);
+    color: var(--color-second-red);
 }
 
 .main-offer-buttons__container button:hover{
    background-color: var(--color-white);
-   color: var(--color-second-black);
+   color: var(--color-second-red);
 }
 
 /* Szzczegóły każdej kategorii */
