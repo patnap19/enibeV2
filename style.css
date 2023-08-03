@@ -17,7 +17,7 @@
 body{
     font-family: "Outfit", sans-serif;
     /* background-color: black; */
-    min-height: 200vh;
+    min-height: 400vh;
 }
 
 section {
@@ -145,7 +145,7 @@ text-transform: uppercase;
 
 .to-contact--btn:hover {
     background-color: var(--color-white);
-    color: var(--color-second-black);
+    color: var(--color-second-red);
 }
 
 /* SEKCJA O NAS DESKTOP */
@@ -194,6 +194,14 @@ text-transform: uppercase;
     padding: 40px 0;
 }
 
+.offer-description {
+    font-size: 36px;
+    line-height: 150%;
+    text-align: justify;
+    letter-spacing: 1px;
+    margin: 50px 3%;
+}
+
 .main-offer-buttons__container{
     margin-top: 100px;
     display: flex;
@@ -201,13 +209,15 @@ text-transform: uppercase;
 }
 
 .main-offer-buttons__container button {
-    padding: 20px 40px;
+    width: 25%;
     font-size: 29px;
-    margin: 0 40px;
+    /* margin: 0 40px; */
+    padding: 30px 0;
     cursor: pointer;
     background-color: transparent;
     color: var(--color-white);
-    border: 1px solid var(--color-white);
+    /* border: 1px solid var(--color-white); */
+    border: none;
     transition: color .3s, background-color .4s;
 }
 
@@ -221,8 +231,103 @@ text-transform: uppercase;
    color: var(--color-second-black);
 }
 
+/* Szzczegóły każdej kategorii */
+
 .main-offer-info__container{
     width: 100%;
     background-color: white;
-    min-height: 50vh;
+    display: flex;
+    justify-content: space-between;
+    padding: 40px 3%;
+}
+
+.main-offer-info__container.show {
+    animation: showMenu .2s;
+}
+
+@keyframes showMenu {
+    0% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+.sub-menu{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    /* align-content: space-between; */
+    flex-wrap: wrap;
+    width: 30%;
+    min-height: 60vh;
+}
+
+
+
+.sub-menu-btn {
+    padding: 20px 40px;
+}
+
+#photo-container {
+    
+    width: 67%;
+}
+
+#photo-container.ppoz-active {
+    background: linear-gradient(to top, rgb(96, 93, 93), transparent),
+    url("images/ppoz-photo.jpg");
+    background-position: center;
+    background-size: cover;
+}
+
+#photo-container.atex-active {
+    background: linear-gradient(to top, rgb(96, 93, 93), transparent),
+    url("images/atex-photo.jpg");
+    background-position: center;
+    background-size: cover;
+}
+
+#photo-container.seveso-active {
+    background: linear-gradient(to top, rgb(96, 93, 93), transparent),
+    url("images/seveso-photo.jpg");
+    background-position: center;
+    background-size: cover;
+}
+
+#photo-container.training-active {
+    background: linear-gradient(to top, rgb(96, 93, 93), transparent),
+    url("images/training-photo.jpg");
+    background-position: center;
+    background-size: cover;
+}
+
+.sub-menu-btn {
+    background-color: var(--color-second-red);
+    color: white;
+    border: 1px solid var(--color-second-red);
+    font-size: 18px;
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: color .3s, background-color .4s;
+}
+
+.sub-menu-btn:hover {
+    background-color: var(--color-white);
+    color: var(--color-second-red);
+}
+
+/* Sekcja realizacje */
+
+/* Sekcja kontakt */
+
+.contact {
+    background-color: var(--color-second-red);
+    color: white;
 }
