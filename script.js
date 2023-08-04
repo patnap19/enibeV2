@@ -190,13 +190,12 @@ const subTitleOpen = (arrayOfButtons, offerId, arrayDesc) => {
                 modalContainer.innerHTML = `
                 <h1>${arrayDesc[index].title}</h1>
                 <p>${arrayDesc[index].desc}</p>
-                <button>Zamknij</button>
                 `;
             }
-            const closeButton = modalContainer.querySelector('button');
-            closeButton.addEventListener('click', () => {
-                modal.classList.remove('modal-show');
-            })
+            // const closeButton = modalContainer.querySelector('button');
+            // closeButton.addEventListener('click', () => {
+            //     modal.classList.remove('modal-show');
+            // })
             modal.addEventListener('click', () => {
                 modal.classList.remove('modal-show');
             })

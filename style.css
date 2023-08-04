@@ -17,7 +17,7 @@
 body{
     font-family: "Outfit", sans-serif;
     /* background-color: black; */
-    min-height: 400vh;
+    /* min-height: 400vh; */
 }
 
 section {
@@ -44,6 +44,7 @@ section {
 }
 
 .modal {
+    z-index: 101;
     background-color: white;
     position: absolute;
     top: 40%;
@@ -327,7 +328,7 @@ text-transform: uppercase;
 .sub-menu-btn {
     background-color: var(--color-second-red);
     color: white;
-    border: 1px solid var(--color-second-red);
+    border: 2px solid var(--color-second-red);
     font-size: 18px;
     letter-spacing: 1px;
     cursor: pointer;
@@ -346,4 +347,87 @@ text-transform: uppercase;
 .contact {
     background-color: var(--color-second-red);
     color: white;
+    padding: 40px 3% 40px 3%;
+}
+
+.contact__elements {
+    display: flex;
+    margin-top: 50px;
+}
+
+.form__container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 50%;
+}
+
+.form__container label {
+    width: 80%;
+}
+
+.form__container input{
+    width: 80%;
+    margin: 10px 0;
+    line-height: 20px;
+}
+
+.send-contact {
+    width: 30%;
+    border: 2px solid var(--color-white);
+    padding: 20px 40px;
+    margin: 30px auto;
+    font-size: 18px;
+    text-transform: uppercase;
+    background-color: transparent;
+    color: var(--color-white);
+    text-decoration: none;
+    transition: color .3s, background-color .4s;
+    cursor: pointer;
+}
+
+.send-contact:hover {
+    color: var(--color-second-red);
+    background-color: var(--color-white);
+}
+
+.contact-info__container {
+    width: 50%;
+}
+
+#contact-message {
+    height: 30vh;
+    width: 80%;
+    text-align: left;
+}
+
+.info-text { 
+    font-size: 22px;
+    text-align: justify;
+    line-height: 30px;
+    margin-bottom: 40px;
+}
+
+.media__container {
+    display: flex;
+    flex-direction: column;
+}
+
+.media {
+    width: 50%;
+    color: var(--color-white);
+    text-decoration: none;
+    font-size: 20px;
+    display: flex;
+    margin: 15px 0;
+    transition: color .3s;
+}
+
+.media i {
+    margin: 0 10px;
+    vertical-align: middle;
+}
+
+.media:hover {
+    color: var(--color-second-black);
 }

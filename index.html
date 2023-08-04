@@ -10,6 +10,7 @@
     />
     <link rel="stylesheet" href="style.css">
     <script src="script.js" defer></script>
+    <script src="https://kit.fontawesome.com/1aceabffa2.js" crossorigin="anonymous"></script>
 </head>
 <body>
     <div class="modal-shadow">
@@ -80,6 +81,27 @@
     </section>
     <section class="contact">
         <h2 class="section-title">Kontakt</h2>
+        <div class="contact__elements">
+
+            <div class="contact-info__container">
+                <p class="info-text">Masz jakiekolwiek pytania? Skontaktuj się z nami! Skorzystaj z formularza, bądź wybierz jedną z pozostałych możliwości:</p>
+                <div class="media__container">
+                    <a href="#" class="media"><i class="fa-solid fa-phone"></i>+48 520 200 200</a>
+                    <a href="#" class="media"><i class="fa-brands fa-facebook-f"></i>Energia i bezpieczeństwo</a>
+                    <a href="#" class="media"><i class="fa-brands fa-instagram"></i>Energia i bezpieczeństwo</a>
+                    <a href="#" class="media"><i class="fa-brands fa-twitter"></i>Energia i bezpieczeństwo</a>
+                </div>
+            </div>
+            <div class="form__container">
+                <label for="contact-message">Treść wiadomości</label>
+                <input type="text-area" id="contact-message" name="contact-message" placeholder="Treść wiadmości">
+                <label for="name">Imię i nazwisko</label>
+                <input type="text" id="name" name="name" placeholder="Imię i nazwisko">
+                <label for="emial">Adres e-mail</label>
+                <input type="text" id="emial" name="emial" placeholder="Adres e-mail">
+                <button class="send-contact">Wyślij</button>
+            </div>
+        </div>   
     </section>
 </body>
 </html>
