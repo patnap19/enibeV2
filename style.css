@@ -431,3 +431,11 @@ text-transform: uppercase;
 .media:hover {
     color: var(--color-second-black);
 }
+
+.footer {
+    padding: 5px 0;
+    font-size: 10px;
+    color: white;
+    background-color: var(--color-second-black);
+    text-align: center;
+}
