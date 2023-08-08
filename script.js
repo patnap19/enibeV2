@@ -431,6 +431,8 @@ projectsBtn.addEventListener('click', (e) => {
 navBurgerBtn.addEventListener('click', toggleMenu);
 
 window.addEventListener('load', renderButtons('ppoz', ppozButtonsArray));
+
+
 ppozBtn.addEventListener('click', handleClick);
 atexBtn.addEventListener('click', handleClick);
 sevesoBtn.addEventListener('click', handleClick);
