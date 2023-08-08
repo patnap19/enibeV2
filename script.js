@@ -6,7 +6,8 @@ const trainingBtn = document.getElementById('training');
 const modal = document.querySelector('.modal-shadow');
 const modalContainer = modal.querySelector('.modal');
 const contactBtn = document.querySelector('.to-contact--btn');
-const projectsBtn = document.querySelector('.to-projects--btn')
+const projectsBtn = document.querySelector('.to-projects--btn');
+const header = document.querySelector('.main-header');
 //zmienne do zmiany oferty
 const photoContainer = document.getElementById('photo-container');
 const mainMenuButtons = document.querySelectorAll('.navigation-element');
@@ -265,11 +266,10 @@ const descTrainingArray = [
     },
 
 ]
-let subButtonsArray = [];
 
 const renderButtons = (offerId, buttonsArray) => {
     subMenu.innerHTML = '';
-    subButtonsArray = [];
+    const subButtonsArray = [];
     let index = 0;
     for(const button of buttonsArray) {
         const buttonEl = document.createElement('button');
@@ -305,10 +305,6 @@ const subTitleOpen = (arrayOfButtons, offerId, arrayDesc) => {
                 </div>
                 `;
             }
-            // const closeButton = modalContainer.querySelector('button');
-            // closeButton.addEventListener('click', () => {
-            //     modal.classList.remove('modal-show');
-            // })
             modal.addEventListener('click', () => {
                 modal.classList.remove('modal-show');
             })
@@ -427,10 +423,17 @@ projectsBtn.addEventListener('click', (e) => {
     });
 })
 
+const onLoadAnimations = () => {
+    renderButtons('ppoz', ppozButtonsArray);
+    header.classList.add('active');
+
+}
+
 
 navBurgerBtn.addEventListener('click', toggleMenu);
 
-window.addEventListener('load', renderButtons('ppoz', ppozButtonsArray));
+window.addEventListener('load', onLoadAnimations);
+
 
 
 ppozBtn.addEventListener('click', handleClick);

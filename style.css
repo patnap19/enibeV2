@@ -219,10 +219,11 @@ body{
     .site-title__container{
         position: absolute;
         top: 45%;
-        left: 0;
+        left: -100%;
         width: 100%;
         text-align: center;
         color: var(--color-white);
+        transition: left .3s;
     }
     
     .site-title{
@@ -236,9 +237,10 @@ body{
         position: absolute;
         bottom: 15%;
         padding: 40px 0;
-        left: 0;
+        left: -100%;
         width: 100%;
         text-align: center;
+        transition: left .3s;
     }
     
     .to-contact--btn{
@@ -255,6 +257,11 @@ body{
         background-color: var(--color-white);
         color: var(--color-second-red);
     }
+
+    .main-header.active .site-title__container,
+    .main-header.active .button__container {
+    left: 0;
+}
     
     /* SEKCJA O NAS DESKTOP */
     
@@ -651,10 +658,11 @@ text-transform: uppercase;
 .site-title__container{
     position: absolute;
     top: 35%;
-    left: 0;
+    left: -100%;
     width: 100%;
     text-align: center;
     color: var(--color-white);
+    transition: left .3s;
 }
 
 .site-title{
@@ -668,9 +676,10 @@ text-transform: uppercase;
     position: absolute;
     bottom: 15%;
     padding: 40px 0;
-    left: 0;
+    left: -100%;
     width: 100%;
     text-align: center;
+    transition: left .3s;
 }
 
 .to-contact--btn{
@@ -686,6 +695,11 @@ text-transform: uppercase;
 .to-contact--btn:hover {
     background-color: var(--color-white);
     color: var(--color-second-red);
+}
+
+.main-header.active .site-title__container,
+.main-header.active .button__container {
+    left: 0;
 }
 
 /* SEKCJA O NAS DESKTOP */
