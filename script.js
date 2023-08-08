@@ -382,6 +382,7 @@ mainMenuButtons[1].addEventListener('click', (e) => {
         toggleMenu();
         }
 })
+
 mainMenuButtons[2].addEventListener('click', (e) => {
     e.preventDefault();
     const aboutStart = document.querySelector('.projects').offsetTop - 79;
@@ -391,8 +392,9 @@ mainMenuButtons[2].addEventListener('click', (e) => {
     })
     if(navBurgerBtn.classList.contains('active')) {
         toggleMenu();
-        }
+    }
 })
+
 mainMenuButtons[3].addEventListener('click', (e) => {
     e.preventDefault();
     const aboutStart = document.querySelector('.contact').offsetTop - 79;
@@ -431,12 +433,26 @@ const onLoadAnimations = () => {
 
 
 navBurgerBtn.addEventListener('click', toggleMenu);
-
 window.addEventListener('load', onLoadAnimations);
-
-
-
 ppozBtn.addEventListener('click', handleClick);
 atexBtn.addEventListener('click', handleClick);
 sevesoBtn.addEventListener('click', handleClick);
 trainingBtn.addEventListener('click', handleClick);
+
+window.addEventListener('scroll', () => {
+    const headerHeight = document.querySelector('.main-header').clientHeight/3;
+    const aboutUsSection = document.querySelector('.about-us-description');
+    const aboutUsSectionHeig = document.querySelector('.about-us').clientHeight + headerHeight;
+    const offerDesc = document.querySelector('.offer-description');
+    if(window.scrollY > headerHeight) {
+        aboutUsSection.classList.add('show');
+    } else {
+        aboutUsSection.classList.remove('show');
+    }
+
+    if(window.scrollY > aboutUsSectionHeig) {
+        offerDesc.classList.add('show');
+    } else {
+        offerDesc.classList.remove('show');
+    }
+})

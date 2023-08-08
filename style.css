@@ -111,7 +111,6 @@ section {
     width: 100%;
     align-items: center;
     transition: top var(--main-transition-time);
-    margin:0 30px;
 }
 
 .navigation-elements.nav-show {
@@ -256,7 +255,12 @@ section {
     line-height: 150%;
     text-align: justify;
     letter-spacing: 1px;
+    display: block;
+    transform: translateX(calc(-100% - 100px));
+    transition: transform var(--long-transition-time);
 }
+
+
     
 .about-us-btn__container {
     width: 100%;
@@ -294,6 +298,12 @@ section {
     text-align: justify;
     letter-spacing: 1px;
     margin: 50px 5%;
+    transform: translateX(110%);
+    transition: transform var(--long-transition-time);
+}
+
+.show{
+    transform: translateX(0);
 }
     
 .main-offer-buttons__container {
