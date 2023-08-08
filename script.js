@@ -5,9 +5,11 @@ const sevesoBtn = document.getElementById('seveso');
 const trainingBtn = document.getElementById('training');
 const modal = document.querySelector('.modal-shadow');
 const modalContainer = modal.querySelector('.modal');
+const contactBtn = document.querySelector('.to-contact--btn');
+const projectsBtn = document.querySelector('.to-projects--btn')
 //zmienne do zmiany oferty
 const photoContainer = document.getElementById('photo-container');
-
+const mainMenuButtons = document.querySelectorAll('.navigation-element');
 //tablica do przycisków 
 const subMenu = document.querySelector('.sub-menu');
 const offerArea = document.querySelector('.main-offer-info__container');
@@ -360,6 +362,71 @@ const toggleMenu = () => {
     navElements.classList.toggle('nav-show');
     navBurgerBtn.classList.toggle('active');
 }
+
+mainMenuButtons[0].addEventListener('click', (e) => {
+    e.preventDefault();
+    const aboutStart = document.querySelector('.about-us').offsetTop - 79;
+    scroll({
+        top: aboutStart,
+        behavior: "smooth"
+    })
+
+    if(navBurgerBtn.classList.contains('active')) {
+    toggleMenu();
+    }
+})
+mainMenuButtons[1].addEventListener('click', (e) => {
+    e.preventDefault();
+    const aboutStart = document.querySelector('.offer').offsetTop - 79;
+    scroll({
+        top: aboutStart,
+        behavior: "smooth"
+    })
+    if(navBurgerBtn.classList.contains('active')) {
+        toggleMenu();
+        }
+})
+mainMenuButtons[2].addEventListener('click', (e) => {
+    e.preventDefault();
+    const aboutStart = document.querySelector('.projects').offsetTop - 79;
+    scroll({
+        top: aboutStart,
+        behavior: "smooth"
+    })
+    if(navBurgerBtn.classList.contains('active')) {
+        toggleMenu();
+        }
+})
+mainMenuButtons[3].addEventListener('click', (e) => {
+    e.preventDefault();
+    const aboutStart = document.querySelector('.contact').offsetTop - 79;
+    scroll({
+        top: aboutStart,
+        behavior: "smooth"
+    })
+    if(navBurgerBtn.classList.contains('active')) {
+        toggleMenu();
+        }
+})
+
+contactBtn.addEventListener('click', (e) => {
+    e.preventDefault();
+    const aboutStart = document.querySelector('.contact').offsetTop - 79;
+    scroll({
+        top: aboutStart,
+        behavior: "smooth"
+    });
+})
+
+projectsBtn.addEventListener('click', (e) => {
+    e.preventDefault();
+    const aboutStart = document.querySelector('.contact').offsetTop - 79;
+    scroll({
+        top: aboutStart,
+        behavior: "smooth"
+    });
+})
+
 
 navBurgerBtn.addEventListener('click', toggleMenu);
 
