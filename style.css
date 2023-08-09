@@ -22,11 +22,11 @@
 
 body {
     font-family: "Outfit", sans-serif;
-    overflow: hidden;
 }
 
 section {
     padding: 40px 5%;
+    overflow: hidden;
 }
 
 .section-title {
