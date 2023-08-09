@@ -19,6 +19,9 @@ const atexButtonsArray = ['Ocena zagrożenia wybuchem', 'Ocena Ryzyka Wybuchu', 
 const sevesoButtonsArray = ['Dokumentacja SEVESO', 'Raport o Bezpieczeństwie', 'Wewnętrzny Plan Operacyjno-Ratowniczy', 'Program Zapobiegania Awariom'];
 const trainingButtonsArray = ['Szkolenia PPOŻ', 'Szkolenia BHP', 'Szkolenie z Pierwszej Pomocy Przedmedycznej'];
 
+
+const navBurgerBtn = document.querySelector('.navigation-burger__container');
+const navElements = document.querySelector('.navigation-elements');
 //tablice z obiektami do opisów
 
 const descPpozArray = [
@@ -352,8 +355,7 @@ function handleClick(event) {
 }
 
 
-const navBurgerBtn = document.querySelector('.navigation-burger__container');
-const navElements = document.querySelector('.navigation-elements');
+
 const toggleMenu = () => {
     navElements.classList.toggle('nav-show');
     navBurgerBtn.classList.toggle('active');
